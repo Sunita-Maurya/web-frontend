@@ -1,38 +1,47 @@
 import React from 'react';
-import bgImage from '../images/home-bg.jpg';
-import { Technologies } from '../Components/Technologies';
+// import bgImage from '../images/home-bg.jpg';
+// import { Technologies } from '../Components/Technologies';
+import Carousal from '../Components/Carousal';
 import OurTeam from './OurTeam';
 const Home = () => {
   return (
-    <div>
-      <div
-        style={{
-          background: `url(${bgImage}) center/cover`,
-          height: '50vh',
-          width: '100vw',
-          objectFit: 'cover',
-        }}
-      >
-        <h1>title</h1>
+    <>
+      {/* carousel */}
+      <Carousal />
+      <div>
+        <OurTeam />
+        {/* <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: 'white',
+          }}
+        >
+          <div style={{ backgroundColor: '#003049', padding: '50px' }}>
+            003049
+          </div>
+          <div style={{ backgroundColor: '#003554', padding: '50px' }}>
+            003554
+          </div>
+          <div style={{ backgroundColor: '#168AAD', padding: '50px' }}>
+            168AAD
+          </div>
+          <div style={{ backgroundColor: '#1A759F', padding: '50px' }}>
+            1A759F
+          </div>
+          <div style={{ backgroundColor: '#1E6091', padding: '50px' }}>
+            1E6091
+          </div>
+          <div style={{ backgroundColor: '#124559', padding: '50px' }}>
+            124559
+          </div>
+          <div style={{ backgroundColor: '#355070', padding: '50px' }}>
+            355070
+          </div>
+        </div> */}
       </div>
-      <div className="text-center ">
-        <h1 className="text-4xl font-bold uppercase h-30 mt-16">
-          Technologies
-        </h1>
-
-        <div className="grid grid-cols-4 gap-4 border-black mt-8 ">
-          {Technologies.map((tech) => {
-            return (
-              <div className="h-60 w-70 m-4 border-red-500 rounded-xl border-gray-500 shadow-lg">
-                <p>images</p>
-                <h3 className="uppercase text-2xl">{tech.name}</h3>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <OurTeam />
-    </div>
+    </>
   );
 };
 

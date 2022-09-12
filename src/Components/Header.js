@@ -1,53 +1,69 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ManuList } from './ManuList';
+
 import '../App.css';
 const Header = () => {
-  const [pageScrolled, setPageScrolled] = useState(false);
-  const setPageScrolledValue = () => {
-    if (window.scrollY > 100) setPageScrolled(true);
-    else setPageScrolled(false);
-  };
-
-  useEffect(() => {
-    setPageScrolledValue();
-    window.addEventListener('scroll', setPageScrolledValue);
-    return () => window.removeEventListener('scroll', setPageScrolledValue);
-  }, []);
 
   return (
     <nav
       style={{
-        background: pageScrolled ? 'black ' : 'transparent',
-        color: 'white',
+        background: '#003049',
+        position: 'fixed',
+        top: 0,
+        zIndex: 100,
       }}
-      className={`flex items-center justify-between fixed flex-wrap pr-16 p-4 w-full shadow-md transition-all`}
+      className={`flex items-center justify-between flex-wrap pr-16 p-4 w-full shadow-md transition-all`}
     >
-      <div className="flex items-center flex-shrink-0  mr-6  ">
-        <span className="font-semibold text-xl tracking-tight ">
-          Logo design
+      <div className=" w-1/3 flex items-center  flex-shrink-0  mr-6  ">
+        <span className="font-semibold text-red-800 text-xl tracking-tight text-3xl ml-10">
+          JMBDD
         </span>
       </div>
 
-      <div className="w-full block flex-grow lg:flex justify-around lg:items-center lg:w-auto mycolor">
-        <div className="text-sm lg:flex justify-center">
-          {ManuList.map((manu) => {
+      <div className="w-full block flex-grow lg:flex justify-between lg:items-center lg:w-auto mycolor ">
+        <div className="  text-sm lg:flex justify-between">
+          {/* {ManuList.map((menu) => {
             return (
               <Link
-                to={manu.url}
-                className="block mt-4 lg:inline-block  lg:mt-0   hover:text-blue-500 mr-16"
+                to={menu.url}
+                className=" menutitile block lg:inline-block lg:mt-  hover:text-white text-lg transition-all"
               >
-                {manu.title}
+                {menu.title}
               </Link>
             );
-          })}
+          })} */}
+
+          <Link
+            to="/"
+            className=" menutitile block lg:inline-block lg:mt- uppercase  hover:text-white text-lg transition-all"
+          >
+            home
+          </Link>
+          <Link
+            to="/about"
+            className=" menutitile block lg:inline-block lg:mt-  hover:text-white text-lg transition-all"
+          >
+            about
+          </Link>
+          <Link
+            to="/"
+            className=" menutitile block lg:inline-block lg:mt-  hover:text-white text-lg transition-all"
+          >
+            services
+          </Link>
+          <Link
+            to="/"
+            className=" menutitile block lg:inline-block lg:mt-  hover:text-white text-lg transition-all"
+          >
+            myTeam
+          </Link>
         </div>
         <div>
           <Link
             to="/about"
-            className="inline-block text-sm px-4 py-2 leading-none border rounded  border ease-linear hover:border-transparent hover:text-black hover:bg-white mt-4 lg:mt-0"
+            className="contact-btn inline-block text-sm leading-none border rounded uppercase border ease-linear hover:border-transparent hover:text-black  mt-4 lg:mt-0 "
           >
-            Contact
+            Contact Us
           </Link>
         </div>
       </div>

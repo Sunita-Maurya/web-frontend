@@ -3,11 +3,11 @@ import About from './Pages/About';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
-// import './App.css';
+import './App.css';
 
 function App() {
   return (
-    <div className="relative font-mono">
+    <div className="relative font-mono red ">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
