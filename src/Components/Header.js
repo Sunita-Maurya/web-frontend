@@ -1,21 +1,29 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { IoIosArrowDropright } from 'react-icons/io';
 import '../App.css';
 const Header = () => {
-
   return (
     <nav
       style={{
-        background: '#003049',
+        // background: '#003049',
+        background: 'transparent',
+
         position: 'fixed',
         top: 0,
         zIndex: 100,
       }}
-      className={`flex items-center justify-between flex-wrap pr-16 p-4 w-full shadow-md transition-all`}
+      className={`flex items-center justify-between flex-wrap pr-16 p-4 w-full transition-all`}
     >
       <div className=" w-1/3 flex items-center  flex-shrink-0  mr-6  ">
-        <span className="font-semibold text-red-800 text-xl tracking-tight text-3xl ml-10">
+        <span
+          className="font-semibold text-xl tracking-tight text-3xl ml-10 "
+          style={{
+            letterSpacing: '-7px',
+            color: '#eb2f40',
+            textShadow: '0 0 20px black',
+          }}
+        >
           JMBDD
         </span>
       </div>
@@ -35,35 +43,36 @@ const Header = () => {
 
           <Link
             to="/"
-            className=" menutitile block lg:inline-block lg:mt- uppercase  hover:text-white text-lg transition-all"
+            className=" menutitile block lg:inline-block text-lg transition-all"
           >
-            home
+            Home
           </Link>
           <Link
             to="/about"
-            className=" menutitile block lg:inline-block lg:mt-  hover:text-white text-lg transition-all"
+            className=" menutitile block lg:inline-block  text-lg transition-all"
           >
-            about
+            About
           </Link>
           <Link
             to="/"
-            className=" menutitile block lg:inline-block lg:mt-  hover:text-white text-lg transition-all"
+            className=" menutitile block lg:inline-block   text-lg transition-all"
           >
-            services
+            Services
           </Link>
           <Link
             to="/"
-            className=" menutitile block lg:inline-block lg:mt-  hover:text-white text-lg transition-all"
+            className=" menutitile block lg:inline-block text-lg transition-all"
           >
-            myTeam
+            Our Team
           </Link>
         </div>
         <div>
           <Link
-            to="/about"
-            className="contact-btn inline-block text-sm leading-none border rounded uppercase border ease-linear hover:border-transparent hover:text-black  mt-4 lg:mt-0 "
+            to="/contact-us"
+            className="contact-btn inline-block leading-none mt-4 lg:mt-0 "
           >
             Contact Us
+            <IoIosArrowDropright className="arrow" />
           </Link>
         </div>
       </div>

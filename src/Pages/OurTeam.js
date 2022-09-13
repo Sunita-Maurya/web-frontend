@@ -16,7 +16,7 @@ function OurTeam() {
         mollit anim id est laborum.
       </p>
 
-      <div className="mt-20 grid grid-cols-4 gap-3 justify-items-center justify-self-center">
+      <div className="mt-20 grid grid-cols-4 gap-3  justify-items-center justify-self-center ">
         {teamImages.map((img) => {
           return (
             <div className="card rounded-xl shadow-lg mb-20">

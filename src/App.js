@@ -4,14 +4,16 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
 import './App.css';
+import ContactUs from './Pages/ContactUs.js';
 
 function App() {
   return (
-    <div className="relative font-mono red ">
+    <div className="App relative font-roboto">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer />
     </div>

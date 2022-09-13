@@ -37,10 +37,10 @@ const Carousal = () => {
             >
               <img
                 src={img}
-                className="block" //w-full
+                className="block rounded-lg" //w-full
                 alt="Mountaintop"
                 style={{
-                  height: '40rem',
+                  height: '30rem',
                   marginInline: 'auto',
                   width: '95%',
                   objectFit: 'cover',

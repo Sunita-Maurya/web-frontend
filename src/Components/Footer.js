@@ -2,14 +2,15 @@ import React from 'react';
 import bgImg from '../images/footer-img.png';
 const Footer = () => {
   return (
-    <div className=" h-96" style={{ backgroundColor: 'var(--footerbg)' }}>
+    <div
+      className=" h-96"
+      style={{ backgroundColor: '#0b0b3a', color: 'var(--textcolor)' }}
+    >
       <footer className="">
         <div className="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">
-              Company
-            </h2>
-            <ul className="text-gray-500 dark:text-gray-400">
+            <h2 className="mb-6 text-sm font-semibold uppercase">Company</h2>
+            <ul className="text-gray-500">
               <li className="mb-4">
                 <a href="#" className=" hover:underline">
                   About
@@ -33,10 +34,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">
+            <h2 className="mb-6 text-sm font-semibold uppercase">
               Help center
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400">
+            <ul className="text-gray-500">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   Discord Server
@@ -60,10 +61,8 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">
-              Legal
-            </h2>
-            <ul className="text-gray-500 dark:text-gray-400">
+            <h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
+            <ul className="text-gray-500">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   Privacy Policy
@@ -82,10 +81,8 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400">
-              Download
-            </h2>
-            <ul className="text-gray-500 dark:text-gray-400">
+            <h2 className="mb-6 text-sm font-semibold  uppercase">Download</h2>
+            <ul className="text-gray-500">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   iOS

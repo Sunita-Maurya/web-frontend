@@ -10,7 +10,7 @@ const Home = () => {
       <Carousal />
       <div>
         <OurTeam />
-        {/* <div
+        <div
           style={{
             display: 'flex',
             justifyContent: 'center',
@@ -39,7 +39,7 @@ const Home = () => {
           <div style={{ backgroundColor: '#355070', padding: '50px' }}>
             355070
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );
