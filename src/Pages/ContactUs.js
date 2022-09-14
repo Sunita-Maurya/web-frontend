@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import backImage from '../images/bg1.jpg';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { IoIosMail } from 'react-icons/io';
 import { MdLocationPin } from 'react-icons/md';
 import { RiSendPlaneFill } from 'react-icons/ri';
 const ContactUs = () => {
+  const [name, setName] = useState('');
+
+  useEffect(() => {}, window.scrollTo(0, 0));
   return (
     <div
       style={{
@@ -18,38 +21,17 @@ const ContactUs = () => {
         className="flex flex-col"
         style={{
           justifyContent: 'center',
-          // alignItems: 'center',
         }}
       >
         <div className="text-center">
           <h1 className="font-bold text-6xl mb-4">Contact Us</h1>
           <p className="text-2xl text-white leading-10">
             Have an&nbsp;
-            <span
-              style={{
-                color: 'var(--bodybg)',
-                backgroundColor: '#ffc42d',
-                padding: '1px 2px',
-                borderRadius: '5px',
-                fontFamily: 'consolas',
-              }}
-            >
-              idea💡
-            </span>
+            <span className="ideabg">idea💡</span>
             ? A new Project?
             <br />
             We would love to&nbsp;
-            <span
-              className=""
-              style={{
-                backgroundColor: '#2ad50b',
-                padding: '1px 2px',
-                borderRadius: '5px',
-                fontFamily: 'consolas',
-              }}
-            >
-              help🤝
-            </span>
+            <span className="helpbg">help🤝</span>
             &nbsp;you to build.
           </p>
         </div>
@@ -96,6 +78,8 @@ const ContactUs = () => {
           <div>
             <input
               type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               required
               placeholder="Name"
               className="ring-1 ring-gray-300 p-2 rounded-md w-full outline-none focus:ring-2 focus:ring-cyan-500"

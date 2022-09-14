@@ -5,6 +5,7 @@ import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
 import './App.css';
 import ContactUs from './Pages/ContactUs.js';
+import OurTeam from './Pages/OurTeam.js';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/team" element={<OurTeam />} />
+
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
       <Footer />
     </div>

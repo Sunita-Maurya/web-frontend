@@ -60,15 +60,21 @@ const Header = () => {
             Services
           </Link>
           <Link
-            to="/"
+            to="/team"
             className=" menutitile block lg:inline-block text-lg transition-all"
           >
             Our Team
           </Link>
+          {/* <a
+            href="#team"
+            className=" menutitile block lg:inline-block text-lg transition-all"
+          >
+            Our Team
+          </a> */}
         </div>
         <div>
           <Link
-            to="/contact-us"
+            to="/contact"
             className="contact-btn inline-block leading-none mt-4 lg:mt-0 "
           >
             Contact Us

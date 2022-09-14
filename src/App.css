@@ -13,14 +13,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   /* background-color: var(--bodybg); */
-  background: rgb(19, 150, 177);
+  /* background: rgb(19, 150, 177);
   background: linear-gradient(
     115deg,
     rgba(19, 150, 177, 1) 5%,
     rgba(11, 11, 58, 1) 62%
+  ); */
+  background: rgb(38, 218, 255);
+  background: linear-gradient(
+    331deg,
+    rgba(38, 218, 255, 1) 5%,
+    rgba(11, 11, 58, 1) 84%
   );
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -108,6 +117,22 @@ body {
 }
 /* menu items close */
 
+/* contact us page */
+.ideabg {
+  color: var(--bodybg);
+  background-color: #ffc42d;
+  padding: 1px 2px;
+  border-radius: 5px;
+  font-family: consolas;
+}
+.helpbg {
+  background-color: #2ad50b;
+  padding: 1px 2px;
+  border-radius: 5px;
+  font-family: consolas;
+}
+/* contact us page close */
+
 /* image card css */
 .card {
   height: 250px;
@@ -115,12 +140,14 @@ body {
   display: inline-block;
   background-color: whitesmoke;
   color: var(--footerbg);
-  padding: 10px;
+  padding: 9px;
   transition: all 200ms ease-in-out;
+  opacity: 0.85;
 }
 .card:hover,
 .card:focus {
   height: 290px;
+  opacity: 1;
 }
 
 .img-box {
