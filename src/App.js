@@ -6,6 +6,8 @@ import Footer from './Components/Footer.js';
 import './App.css';
 import ContactUs from './Pages/ContactUs.js';
 import OurTeam from './Pages/OurTeam.js';
+import React, { Component } from 'react';
+import SimpleForm from "./Components/chatbot/SimpleForm.js";
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
 
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
+      <div>
+        <SimpleForm />
+      </div>
       <Footer />
     </div>
   );

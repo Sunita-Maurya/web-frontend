@@ -1,0 +1,2 @@
+react-simple-chatbot
+styled-components
